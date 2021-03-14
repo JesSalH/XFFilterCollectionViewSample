@@ -4,7 +4,10 @@
              x:Class="XFFilterCollectionViewSample.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        
+        
+        
+        <!--<Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Filtering CollectionView Sample" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <SearchBar TextChanged="SearchBar_TextChanged" />
@@ -15,7 +18,26 @@
                     <Label Text="{Binding .}" HorizontalTextAlignment="Center" />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+        </CollectionView>-->
 
+
+
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="This is an easier way of filtering" HorizontalTextAlignment="Center" TextColor="Yellow" FontSize="26"/>
+            </Frame>
+            <SearchBar TextChanged="SearchBarCollection_TextChanged" />
+
+            <CollectionView ItemsSource="{Binding MyCollectionItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" HorizontalTextAlignment="Center" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+
+
+        
+    </StackLayout>
 </ContentPage>
